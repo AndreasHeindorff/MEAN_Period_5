@@ -64,4 +64,4 @@ Example: https://github.com/AndreasHeindorff/MEANPeriod5FirebaseChat
 
 #### 11. Explain and demonstrate the difference between the simple chat system in your own WebSocket + Node.js backend vs. Firebase.
 
-The difference between the two backends is that with Node.js, I had to manually create the backend. Having to set up MongoDB, mongoose, create Schemas etc. If I was to add security, that would add even more work on my end. With the FireBase chat system I "almost only" had to insert the refference to my app at FireBase. Hosting my chat apps at FireBase vs Openshift would've been the same story. It's way more simplified.
+The difference between the two backends is that with Node.js, I had to manually create the backend. Having to set up MongoDB, mongoose, create Schemas etc. If I was to add security, that would add even more work on my end. With the FireBase chat system I "almost only" had to insert the refference to my app at FireBase. Hosting my chat apps at FireBase vs Openshift would've been the same story. Implementing sockets with a Node.js backend is also at least 5 times the work, compared to what it would take with FireBase.
