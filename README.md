@@ -33,10 +33,35 @@ Example: https://github.com/AndreasHeindorff/MEANPeriod5Chat
 
 #### 7. What's the advantage of using libraries like Socket.IO, Sock.JS, WS, over pure WebSocket libraries in the backend and standard APIs on frontend? Which problems do they solve?
 
+- Abstraction layer with API's for both server and client.
+- Allows developers to send and recieve data with worrying about browser compatibility.
+- Fallbacks to polling with incompatible browsers.
+
 #### 8. What is Backend as a Service, Database as a Service, why would you consider using Firebase in your projects?
+
+Backend and database as a service means you have your data stored at someone else.. Like Firebase. Such solutions are easy and fast,
+since it takes very few lines of code to get working, and Firebase stores and handles your data very nicely and effeciently.
 
 #### 9. Explain the pros & cons of using a Backend as a Service Provider like Firebase.
 
+Pros:
+- Real-time functionality is already built for you.
+- Built in database and hosting.
+- Built in scaling.
+- Built in Security.
+
+Cons: 
+- If a service like Firebase is down, then so is your service. 
+- You're locked into that using that provider, since switching will be troublesome.
+- Cheaper than building your own backend.
+
 #### 10. Explain and demonstrate “three-way data binding” using Firebase and Angular
 
+In AngularJS our scope model and view stay in sync due to the two-way-binding. If you use FireBase as a backend, three-way-binding
+is possible. The model can be found to a FireBase location, so that whenever your models change, those are automatically pushed to FireBase. Similarly, whenever data at the FireBase location changes, your local scope will be updated. This creates the three-way-binding. 
+
+Example: https://github.com/AndreasHeindorff/MEANPeriod5FirebaseChat
+
 #### 11. Explain and demonstrate the difference between the simple chat system in your own WebSocket + Node.js backend vs. Firebase.
+
+The difference between the two backends is that with Node.js, I had to manually create the backend. Having to set up MongoDB, mongoose, create Schemas etc. If I was to add security, that would add even more work on my end. With the FireBase chat system I "almost only" had to insert the refference to my app at FireBase. Hosting my chat apps at FireBase vs Openshift would've been the same story. It's way more simplified.
