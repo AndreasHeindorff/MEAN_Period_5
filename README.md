@@ -20,9 +20,16 @@ HTML5 Web Sockets, however, introduces a full-duplex, bidirectional communicatio
 
 #### 5. Explain what the WebSocket Protocol brings to the Web-world.
 
-
+Above questions explain most of it, but instead of having to refresh pages manually to get up-to-date "real-time" information, websockets provide "automatic" real-time information on web applications.
 
 #### 6. Explain and demonstrate the process of WebSocket communication - From connecting client to server, through sending messages, to closing connection.
+
+By accessing the different sockets defined in the source code, you can accomplish things  such as connection to a server or sending messages. In my example, I have "defined" a bunch of sockets when a user connects to server.
+While the user is conencted, he/she can access the other sockets such as sending a message, or creating a username.
+These sockets are accessed by interacting with DOM elements on the HTML page, which are defined in the corrosponding JavaScript file.
+When the user interacts with the DOM element, a function from the Javascript code is called, which uses "socket.emit("socketname", data)", in order to access the sockets.
+
+Example: https://github.com/AndreasHeindorff/MEANPeriod5Chat
 
 #### 7. What's the advantage of using libraries like Socket.IO, Sock.JS, WS, over pure WebSocket libraries in the backend and standard APIs on frontend? Which problems do they solve?
 
